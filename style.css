@@ -8,16 +8,44 @@
     margin: 0px;
 }
 
+
+body {
+    font-family: 'Mada', sans-serif;
+    direction: rtl;
+    transition: ease-in-out 0.5s;
+}
+
 header h1 {
     font-family: 'Gulzar', serif;
     font-size: 70px;
     text-align: center;
 }
 
-body {
-    font-family: 'Mada', sans-serif;
-    direction: rtl;
-    transition: ease-in-out 0.5s;
+header nav {
+    background-color: white;
+    border: 2px solid black;
+    padding: 10px;
+    position: fixed;
+    margin: 20px;
+    left: 1%;
+    top: 10px;
+}
+
+header nav ul{
+    list-style: none;
+    text-align: center;
+}
+
+
+header nav ul li a{
+    left: 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}
+header nav ul li a:hover{
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 h2 {
@@ -29,7 +57,7 @@ h3 {
     color: lightseagreen;
 }
 p {
-    width: 60%;
+    width: 70%;
     font-size: 28px;
 }
 
