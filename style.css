@@ -13,18 +13,20 @@ body {
     font-family: 'Mada', sans-serif;
     direction: rtl;
     transition: ease-in-out 0.5s;
+    background-color: #eff7f6;
 }
 
 header h1 {
     font-family: 'Gulzar', serif;
     font-size: 70px;
     text-align: center;
+    background-color: white;
 }
 
 
 header nav {
     background-color: white;
-    border: 2px solid black;
+    border: 3px dashed #127475;
     padding: 10px;
     position: fixed;
     margin: 20px;
@@ -49,6 +51,15 @@ header nav ul li a:hover{
     font-weight: bold;
 }
 
+div {
+    padding: 10px;
+    margin: 10px;
+}
+
+div ul {
+    list-style: none;
+}
+
 h2 {
     font-size: 42px;
     color: tomato;
@@ -60,4 +71,37 @@ h3 {
 p {
     width: 70%;
     font-size: 26px;
+}
+
+
+.quiz-container {
+    border: 2px solid #127475;
+}
+
+.quiz-container p {
+    width: fit-content;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.quiz-container button {
+    display: flex;
+    justify-content: space-between;
+    background-color: #127475;
+    border: none;
+    color: white;
+    padding: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.quiz-container button:hover {
+    padding: 10px;
+    text-decoration: underline;
+}
+
+.quiz-container button:active {
+    background-color: black;
+    font-weight: bold;
 }

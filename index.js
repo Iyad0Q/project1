@@ -1,3 +1,27 @@
+// handwriter effect code
+
+const textElement = document.getElementById("title");
+const text = textElement.innerText;
+textElement.innerText = "";
+
+let charIndex = 0;
+
+function typeText() {
+    textElement.innerText += text[charIndex];
+    charIndex++;
+
+    if (charIndex < text.length) {
+        setTimeout(typeText, 100); // Adjust the delay to control the typing speed
+    }
+}
+
+typeText();
+
+
+
+
+// quiz code
+
 const questions = [
     {
         question: "What is 2 + 2?",
