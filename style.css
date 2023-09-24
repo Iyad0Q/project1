@@ -21,6 +21,7 @@ header h1 {
     text-align: center;
 }
 
+
 header nav {
     background-color: white;
     border: 2px solid black;
@@ -49,16 +50,14 @@ header nav ul li a:hover{
 }
 
 h2 {
-    font-size: 45px;
+    font-size: 42px;
     color: tomato;
 }
 h3 {
-    font-size: 32px;
+    font-size: 30px;
     color: lightseagreen;
 }
 p {
     width: 70%;
-    font-size: 28px;
+    font-size: 26px;
 }
-
-
