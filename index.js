@@ -100,3 +100,13 @@ function showResult() {
 showQuestion();
 
 nextButton.addEventListener("click", nextQuestion);
+
+
+// navbar button
+
+let button = document.querySelector("span");
+let navbar = document.querySelector("nav");
+
+button.addEventListener("click", function() {
+    navbar.classList.toggle("open");
+})
