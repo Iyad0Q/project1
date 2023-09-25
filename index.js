@@ -24,19 +24,19 @@ typeText();
 
 const questions = [
     {
-        question: "What is 2 + 2?",
-        options: ["3", "4", "5", "6"],
-        answer: "4"
+        question: "أمثلة على نظام تشغيل",
+        options: ["cmd", "microsoft", "Iphone", "IOS"],
+        answer: "IOS"
     },
     {
-        question: "Which planet is known as the Red Planet?",
-        options: ["Earth", "Mars", "Jupiter", "Saturn"],
-        answer: "Mars"
+        question: "تصنف البرمجيات إلى",
+        options: ["لا توجد إجابة صحيحة", "برمجيات الهاردوير - برمجيات السوفتوير", "برمجيات خبيثة - برمجيات نافعة", "برامج تطبيقية - برامج النظام"],
+        answer: "برامج تطبيقية - برامج النظام"
     },
     {
-        question: "What is the capital of France?",
-        options: ["Berlin", "Madrid", "Rome", "Paris"],
-        answer: "Paris"
+        question: "ما الذي يديره نظام الشغيل ؟",
+        options: ["جميع ما سبق", "أجهزة الإدخال", "العمليات", "الملفات"],
+        answer: "جميع ما سبق"
     }
 ];
 
@@ -67,7 +67,8 @@ function checkAnswer(selectedOption) {
     if (selectedOption === question.answer) {
         score++;                 
         resultElement.textContent = "Correct!";
-    } else {
+    }
+    else {
         resultElement.textContent = "Incorrect. The correct answer is: " + question.answer;
     }
     nextButton.style.display = "block";
@@ -76,14 +77,11 @@ function checkAnswer(selectedOption) {
 
 function nextQuestion() {
     currentQuestion++;
-    if (currentQuestion <= questions.length) {
+    if (currentQuestion < questions.length) {
         showQuestion();
         resultElement.textContent = "";
         nextButton.style.display = "none";
         optionsContainer.addEventListener("click", (event) => {
-            if (event.target.classList.contains("option")) {
-                checkAnswer(event.target.textContent);
-            }
         });
     } else {
         showResult();
@@ -91,9 +89,9 @@ function nextQuestion() {
 }
 
 function showResult() {
-    questionElement.textContent = "Quiz completed!";
+    questionElement.textContent = "لقد انتهيت";
     optionsContainer.innerHTML = "";
-    resultElement.textContent = "Your Score: " + score + " out of " + 6;
+    resultElement.textContent = "نتيجتك: " + score + " من " + currentQuestion;
     nextButton.style.display = "none";
 }
 
@@ -109,4 +107,22 @@ let navbar = document.querySelector("nav");
 
 button.addEventListener("click", function() {
     navbar.classList.toggle("open");
-})
+});
+
+// questions
+
+const hideButtons = document.querySelectorAll(".showAOQ");
+
+hideButtons.forEach((button) => {
+    button.addEventListener("click", function() {
+        const container = button.parentElement;
+
+        const textElement = container.querySelector(".aoq");
+        if (textElement.style.display === "none" || textElement.style.display === "") {
+            textElement.style.display = "block";
+            hideButtons.innerText = "إخفاء الإجابة"
+        } else {
+            textElement.style.display = "none";
+        }
+    });
+});

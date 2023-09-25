@@ -16,7 +16,7 @@ body {
     background-color: #eff7f6;
 }
 
-header h1 {
+header h1, footer h1 {
     font-family: 'Gulzar', serif;
     font-size: 70px;
     text-align: center;
@@ -80,10 +80,42 @@ p {
     font-size: 26px;
 }
 
+.question {
+    margin-top: 40px;
+}
+
+.question h3 {
+    margin: 0;
+    padding: 0;
+    color:darkblue;
+}
+
+.aoq {
+    text-decoration: underline;
+    display: none;
+}
+
+.aoq.unhidden {
+    display: block;
+}
+
+.showAOQ {
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 15px;
+}
+.showAOQ:hover, .showAOQ:active {
+    border: 2px solid black;
+}
+
 
 .quiz-container {
     border: 2px solid #127475;
 }
+
 
 .quiz-container p {
     width: fit-content;
@@ -115,16 +147,17 @@ p {
 
 
 @media screen and (max-width: 500px) {
-    header h1 {
+    header h1, footer h1 {
         font-size: 40px;
     }
     header span {
         position: fixed;
         top: 1px;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.856);
         padding: 15px;
         border-radius: 50%;
         z-index: 1;
+        border: 2px solid black;
     }
     header nav {
         display: none;
